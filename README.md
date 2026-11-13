@@ -1,3 +1,16 @@
+<p align="center">
+  <img src="docs/assets/amirkabir-logo.png" width="110" alt="Amirkabir University Logo">
+</p>
+
+<p align="center">
+  <strong>Erfan Najafi</strong><br>
+  40113901<br>
+  Compiler Project<br>
+  Instructor: Prof.Dr. Shirali-Shareza
+</p>
+
+---
+
 # B-Minor front-end — phase one
 
 Phase one of the compiler-design project: a C++ front-end for the B-Minor
@@ -68,7 +81,7 @@ and design decisions are in [`docs/design.md`](docs/design.md).
 ```
 include/bminor/    public headers (source locations, tokens, AST, lexer, parser, highlighting)
 src/               implementation and the bminor driver
-docs/              grammar, lexical specification, design notes
+docs/              grammar, lexical specification, design notes, logo asset
 tests/valid/       programs that must lex and parse cleanly
 tests/invalid/     programs with lexical or syntax errors and their expected diagnostics
 tests/run_tests.sh test driver
