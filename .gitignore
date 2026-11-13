@@ -4,3 +4,6 @@ out/
 *.o
 *.d
 compile_commands.json
+
+# local tooling scratch space
+.freebuff/
