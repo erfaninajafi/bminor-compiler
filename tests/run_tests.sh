@@ -9,9 +9,18 @@
 
 set -uo pipefail
 
-ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+# A non-empty CDPATH makes `cd` echo the directory it selected, which would be
+# captured by the command substitution below and turn ROOT into two lines.
+unset CDPATH
+
+SCRIPT_DIR="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd -P)"
+if [[ -z "$SCRIPT_DIR" ]]; then
+  echo "error: cannot determine the script directory" >&2
+  exit 1
+fi
+ROOT="$(dirname -- "$SCRIPT_DIR")"
 BIN="$ROOT/bin/bminor"
-cd "$ROOT" || exit 1
+cd -- "$ROOT" >/dev/null 2>&1 || { echo "error: cannot enter $ROOT" >&2; exit 1; }
 
 pass=0
 fail=0
