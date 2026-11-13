@@ -1,0 +1,2 @@
+tests/invalid/missing_brace.bminor:4:1: error: expected '}' to close the block, found end of file
+bminor: 1 error(s) reported

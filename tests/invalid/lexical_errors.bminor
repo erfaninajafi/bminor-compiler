@@ -1,0 +1,9 @@
+function main(): integer {
+  var s: string = "unterminated;
+  var c: char = 'ab';
+  var bad: integer = 12ab;
+  var n: integer = 1;
+  n = n @ 2;
+  return 0;
+}
+/* this block comment is never closed

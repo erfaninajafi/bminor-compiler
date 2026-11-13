@@ -1,0 +1,20 @@
+// Operator precedence, associativity, calls and array indexing.
+function add(a: integer, b: integer): integer { return a + b; }
+
+function main(): integer {
+  var grid: array[integer];
+  var flag: boolean = true;
+  var text: string = "escaped \"quote\" and tab\tinside";
+  var letter: char = '\'';
+  var value: integer = 2 + 3 * 4 - -5 % 3;
+  var nested: integer = add(add(1, 2), add(3, 4));
+  var ratio: integer = (value + 1) * (nested - 2) / 2;
+  if (!flag || (value >= ratio && ratio != 0)) {
+    grid[value % 7] = ratio;
+  }
+  while (value > 0 && nested > 0) {
+    nested -= 1;
+    value = value - 1;
+  }
+  return grid[0] + letter + ratio;
+}

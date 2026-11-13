@@ -1,0 +1,10 @@
+tests/invalid/lexical_errors.bminor:2:19: error: unterminated string literal
+tests/invalid/lexical_errors.bminor:3:17: error: character literal must contain exactly one character
+tests/invalid/lexical_errors.bminor:4:22: error: malformed integer literal '12ab'
+tests/invalid/lexical_errors.bminor:6:9: error: unexpected character '@' in input
+tests/invalid/lexical_errors.bminor:9:1: error: unterminated block comment
+tests/invalid/lexical_errors.bminor:3:3: error: expected ';' after the variable declaration, found 'var'
+tests/invalid/lexical_errors.bminor:3:17: error: expected an expression, found ''ab''
+tests/invalid/lexical_errors.bminor:4:22: error: expected an expression, found '12ab'
+tests/invalid/lexical_errors.bminor:6:9: error: expected ';' after the expression, found '@'
+bminor: 9 error(s) reported

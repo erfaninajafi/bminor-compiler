@@ -1,0 +1,24 @@
+// Context sensitive colouring: gcd is a function, a/b/limit are variables.
+function gcd(a: integer, b: integer): integer {
+  while (b != 0) {
+    var t: integer = b;
+    b = a % b;
+    a = t;
+  }
+  return a;
+}
+
+function main(): integer {
+  var limit: integer = 48;
+  var name: string = "B-Minor\n";
+  var letter: char = 'A';
+  var ok: boolean = true;
+  var seen: array[boolean];
+  if (ok && gcd(limit, 6) > 1) {
+    print name, letter, limit, '!';
+  }
+  for (limit = 0; limit < 10; limit += 1) {
+    seen[limit] = false;
+  }
+  return 0;
+}

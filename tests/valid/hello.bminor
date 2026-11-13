@@ -1,0 +1,10 @@
+// A first B-Minor program: declarations, a call and a print statement.
+function greet(name: string): void {
+  print "hello, ", name, '\n';
+}
+
+function main(): integer {
+  var who: string = "B-Minor";
+  greet(who);
+  return 0;
+}

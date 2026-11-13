@@ -1,0 +1,4 @@
+tests/invalid/syntax_errors.bminor:3:3: error: expected ';' after the variable declaration, found 'x'
+tests/invalid/syntax_errors.bminor:4:13: error: expected ')' after the condition, found '{'
+tests/invalid/syntax_errors.bminor:7:9: error: expected '(' after 'while', found 'x'
+bminor: 3 error(s) reported

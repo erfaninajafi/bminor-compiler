@@ -1,0 +1,26 @@
+/* Control flow sample: every statement form of the grammar. */
+function classify(value: integer): integer {
+  if (value < 0) {
+    return -1;
+  } else if (value == 0) {
+    return 0;
+  } else {
+    return 1;
+  }
+}
+
+function main(): integer {
+  var i: integer = 0;
+  var total: integer = 0;
+  while (i < 5) {
+    total = total + i;
+    i += 1;
+  }
+  for (i = 0; i <= 10; i = i + 2) {
+    total = total + classify(-i);
+    if (total > 100) { print "overflow"; }
+  }
+  ;
+  print total;
+  return total;
+}
